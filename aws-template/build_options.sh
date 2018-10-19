@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 CURRENT_USER=$(whoami)
-export OPT_CLUSTER_ID=${CURRENT_USER}-${PWD##*-}
+CURRENT_DIR=$(basename "$PWD")
+export OPT_CLUSTER_ID=${CURRENT_USER}-${CURRENT_DIR}
 
 ##################################################
 # Provision/Terminate

@@ -20,7 +20,7 @@ if [ -z $commitish ] && [ -z $branch ]; then
     
 elif [ -z $commitish ]; then
     echo "Fetch."
-    #git fetch upstream $branch:$name
+    git fetch upstream $branch
     echo "Add worktree."
     git worktree add -B $name ../$name/openshift-ansible upstream/$branch 
 
